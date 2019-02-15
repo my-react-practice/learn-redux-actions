@@ -1,5 +1,5 @@
-// import { createAction } from 'redux-actions';
-const { createAction, createActions } = require('redux-actions');
+const { createStore } = require('redux');
+const { createAction, createActions, handleActions } = require('redux-actions');
 
 const increment = createAction('INCREMENT');
 const decrement = createAction('DECREMENT');
@@ -10,6 +10,41 @@ test('createAction(type)', () => {
   expect(decrement()).toEqual({ type: 'DECREMENT' });
   expect(decrement([1, 42])).toEqual({ type: 'DECREMENT', payload: [1, 42] });
 });
+const initialState = { counter: 0 };
+const reducer = handleActions(
+  {
+    INCREMENT: (state, action) => ({
+      counter: state.counter + action.payload
+    }),
+    DECREMENT: (state, action) => ({
+      counter: state.counter - action.payload
+    })
+  },
+  initialState
+);
+// const reducer = handleActions(
+//   new Map(
+//     [
+//       increment,
+//       (state, action) => ({
+//         counter: state.counter + action.payload
+//       })
+//     ],
+//     [
+//       decrement,
+//       (state, action) => ({
+//         counter: state.counter - action.payload
+//       })
+//     ]
+//   ),
+//   initialState
+// );
+
+const store = createStore(reducer, initialState);
+store.dispatch(increment(12));
+console.log(store.getState());
+store.dispatch(decrement(2));
+console.log(store.getState());
 
 // ==================================================================
 

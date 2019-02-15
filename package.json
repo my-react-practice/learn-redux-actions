@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/my-react-practice/learn-redux-actions#readme",
   "dependencies": {
+    "redux": "^4.0.1",
     "redux-actions": "^2.6.4"
   },
   "devDependencies": {

@@ -101,6 +101,7 @@ test('createActions(actionMap)', () => {
 });
 
 // ==================================================================
+
 const { actionOne, actionTwo, actionThree } = createActions(
   {
     // function form; payload creator defined inline

@@ -1,0 +1,31 @@
+{
+  "name": "learn-redux-actions",
+  "version": "1.0.0",
+  "description": "Learn redux-actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/my-react-practice/learn-redux-actions.git"
+  },
+  "keywords": [
+    "redux-actions"
+  ],
+  "author": "lizhigao <lizhigao1231@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/my-react-practice/learn-redux-actions/issues"
+  },
+  "homepage": "https://github.com/my-react-practice/learn-redux-actions#readme",
+  "dependencies": {
+    "redux-actions": "^2.6.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0"
+  }
+}

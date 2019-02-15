@@ -32,8 +32,6 @@ const reducer2 = handleActions(
   { counter: 10 }
 );
 
-console.log(reducer.toString());
-
 test('combintActions2', () => {
   expect(reducer2({ counter: 5 }, increment(5))).toEqual({ counter: 10 });
   expect(reducer2({ counter: 5 }, decrement(5))).toEqual({ counter: 0 });
